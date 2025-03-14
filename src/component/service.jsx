@@ -18,7 +18,6 @@ const services = [
     { id: 14, title: "Family Law", description:"We handle various family law matters, including divorce, child custody, division of marital property, and inheritance. Our team provides sensitive and effective legal advice and representation to help clients resolve their family issues in the best way possible.", image: "/Assets/Service Icon/family-law.png" },
 ];
 
-
 const Service = () => {
     const [showAll, setShowAll] = useState(false);
     const [selectedService, setSelectedService] = useState(null);
@@ -29,10 +28,11 @@ const Service = () => {
         <section id="services" className="relative py-16">
             {/* Background Gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#6C264B] to-[#F3EDE1]"></div>
+            
             {/* Overlay Background */}
             <div
-            className="absolute inset-0 bg-cover bg-center opacity-20"
-            style={{ backgroundImage: "url('/Assets/Background/Services Background.jpg')" }}
+                className="absolute inset-0 bg-cover bg-center opacity-20"
+                style={{ backgroundImage: "url('/Assets/Background/Services Background.jpg')" }}
             ></div>
     
             {/* Content Wrapper */}
@@ -40,40 +40,36 @@ const Service = () => {
                 <h2 className="text-3xl font-bold text-center mb-8">Services</h2>
         
                 {/* Grid Cards with Smooth Animation */}
-                <div className="grid grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     <AnimatePresence>
-                    {visibleServices.map((service) => (
-                        <motion.div
-                        key={service.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.3 }}
-                        className="bg-white shadow-lg overflow-hidden flex flex-col h-full cursor-pointer"
-                        onClick={() => setSelectedService(service)}
-                        >
-                        <img
-                            src={service.image}
-                            alt={service.title}
-                            className="w-20 h-20 mx-auto mt-4 object-contain"
-                        />
-                        <div className="p-4 text-center text-black flex-grow">
-                            <h3 className="text-lg font-semibold">{service.title}</h3>
-                        </div>
-                        <div className="bg-[#D1A43F] h-[5px] w-full mt-auto"></div>
-                        </motion.div>
-                    ))}
+                        {visibleServices.map((service) => (
+                            <motion.div
+                                key={service.id}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -20 }}
+                                transition={{ duration: 0.3 }}
+                                className="bg-white shadow-lg overflow-hidden flex flex-col h-full cursor-pointer min-h-[200px]"
+                                onClick={() => setSelectedService(service)}
+                            >
+                                <img src={service.image} alt={service.title} className="w-20 h-20 mx-auto mt-4 object-contain" />
+                                <div className="p-4 text-center text-black flex-grow">
+                                    <h3 className="text-lg font-semibold">{service.title}</h3>
+                                </div>
+                                <div className="bg-[#D1A43F] h-[5px] w-full mt-auto"></div>
+                            </motion.div>
+                        ))}
                     </AnimatePresence>
                 </div>
     
                 {/* Button See More / Show Less */}
                 <div className="text-center mt-8">
                     <motion.button
-                    onClick={() => setShowAll(!showAll)}
-                    className="bg-[#D1A43F] text-white px-6 py-2 font-bold transition hover:opacity-80"
-                    whileTap={{ scale: 0.95 }}
+                        onClick={() => setShowAll(!showAll)}
+                        className="bg-[#D1A43F] text-white px-10 py-2 font-bold transition hover:opacity-80"
+                        whileTap={{ scale: 0.95 }}
                     >
-                    {showAll ? "Show Less" : "See More"}
+                        {showAll ? "Show Less" : "See More"}
                     </motion.button>
                 </div>
             </div>
@@ -82,35 +78,35 @@ const Service = () => {
             <AnimatePresence>
                 {selectedService && (
                     <motion.div
-                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
+                        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
                     >
-                    <motion.div
-                        initial={{ scale: 0.9, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        exit={{ scale: 0.9, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="bg-white p-6 text-center shadow-xl max-w-md"
-                    >
-                        <h3 className="text-2xl font-bold text-black mb-4">
-                        {selectedService.title}
-                        </h3>
-                        <p className="text-gray-700">{selectedService.description}</p>
-                        <motion.button
-                        onClick={() => setSelectedService(null)}
-                        className="mt-4 bg-[#D1A43F] text-white px-4 py-2 font-bold transition hover:opacity-80"
-                        whileTap={{ scale: 0.95 }}
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="bg-white p-6 text-center shadow-xl max-w-md rounded-lg"
                         >
-                        Close
-                        </motion.button>
+                            <h3 className="text-2xl font-bold text-black mb-4">
+                                {selectedService.title}
+                            </h3>
+                            <p className="text-gray-700">{selectedService.description}</p>
+                            <motion.button
+                                onClick={() => setSelectedService(null)}
+                                className="mt-4 bg-[#D1A43F] text-white px-4 py-2 font-bold transition hover:opacity-80"
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                Close
+                            </motion.button>
+                        </motion.div>
                     </motion.div>
-                    </motion.div>
-                )}  
+                )}
             </AnimatePresence>
         </section>
     );
 };
-  
+
 export default Service;
