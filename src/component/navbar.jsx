@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Logo from "../assets/brand_Logo/DOP Logo.png";
 
 const Navbar = () => {
@@ -23,8 +23,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
         {/* Logo */}
         <div className="flex items-center">
-        <img src={Logo} alt="Djemat Odang & Partners" className="h-40 w-auto" />
-
+          <img src={Logo} alt="Djemat Odang & Partners" className="h-40 w-auto" />
         </div>
 
         {/* Desktop Menu */}
@@ -41,20 +40,21 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-900"
+          className="md:hidden text-gray-900 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <Menu size={28} />
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="md:hidden absolute top-16 left-0 w-full bg-black/80 shadow-md flex flex-col items-center py-4 space-y-4 text-white">
+        <ul className="md:hidden absolute top-16 left-0 w-full bg-black/90 shadow-md flex flex-col items-center py-4 space-y-4 text-white">
           {["Home", "About Us", "Services", "Team", "Contact"].map((item) => (
             <li
               key={item}
-              className="hover:text-yellow-500 transition-colors cursor-pointer"
+              className="hover:text-yellow-500 transition-colors cursor-pointer text-lg"
+              onClick={() => setIsOpen(false)} // Close menu on click
             >
               {item}
             </li>

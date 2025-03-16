@@ -1,3 +1,7 @@
+import Background from "../assets/Background/Home Background.jpg";
+
+
+
 const Home = () => {
   return (
     <section
@@ -5,7 +9,7 @@ const Home = () => {
     >
       {/* Background Image */}
       <img 
-        src="/src/assets/Background/Home Background.jpg" 
+        src={Background} 
         alt="Background" 
         className="absolute min-w-full min-h-full object-cover"
       />
@@ -23,7 +27,7 @@ const Home = () => {
         </h1>
 
         {/* Button */}
-        <button className="mt-6 px-6 py-3 border border-yellow-400 text-yellow-400 font-semibold hover:bg-yellow-400 hover:text-[#6C264B] transition">
+        <button className="mt-6 px-8 py-3 border border-yellow-400 text-yellow-400 font-semibold hover:bg-yellow-400 hover:text-[#6C264B] transition">
           GET IN TOUCH
         </button>
       </div>
