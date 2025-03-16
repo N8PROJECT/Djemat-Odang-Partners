@@ -4,21 +4,28 @@ import Logo from "../assets/brand_Logo/DOP Logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [navBg, setNavBg] = useState("bg-transparent");
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const aboutUsSection = document.getElementById("about-us");
+      if (aboutUsSection) {
+        const rect = aboutUsSection.getBoundingClientRect();
+        if (rect.top <= 50 && rect.bottom >= 50) {
+          setNavBg("bg-[#6C264B]/70 backdrop-blur-md"); // Darker background for visibility
+        } else {
+          setNavBg("bg-transparent backdrop-blur-lg");
+        }
+      }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full transition-all duration-300 z-50 backdrop-blur-lg ${
-        isScrolled ? "bg-white/30 shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 w-full transition-all duration-300 z-50 shadow-md ${navBg}`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
         {/* Logo */}
@@ -40,7 +47,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-900 focus:outline-none"
+          className="md:hidden text-white focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
