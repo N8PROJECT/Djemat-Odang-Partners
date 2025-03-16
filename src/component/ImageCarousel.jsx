@@ -1,9 +1,5 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/autoplay";
-import { Autoplay, EffectCoverflow } from "swiper/modules";
-
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import image1 from "../assets/testCarousell/image1.jpg";
 import image2 from "../assets/testCarousell/image2.jpg";
 import image3 from "../assets/testCarousell/image3.jpg";
@@ -11,32 +7,58 @@ import image3 from "../assets/testCarousell/image3.jpg";
 const images = [image1, image2, image3];
 
 const ImageCarousel = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="w-full max-w-3xl mx-auto">
-      <Swiper
-        modules={[Autoplay, EffectCoverflow]}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        loop={true}
-        effect="coverflow"
-        centeredSlides={true} // Ensures the middle slide is in focus
-        slidesPerView={3} // Displays 3 images at a time
-        initialSlide={1} // Ensures the middle image starts as the highlight
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 50, // Adjusts spacing between images
-          depth: 300, // Adjusts perspective depth
-          modifier: 1, // Controls scaling effect
-          scale: 1, // Ensures center slide is biggest
-          slideShadows: false,
-        }}
-        className="w-full h-[350px]"
-      >
-        {images.map((src, index) => (
-          <SwiperSlide key={index} className="flex justify-center items-center">
-            <img src={src} alt={`Slide ${index + 1}`} className="w-full h-full object-cover rounded-lg" />
-          </SwiperSlide>
+    <div className="relative flex flex-col items-center">
+      {/* Image Container */}
+      <div className="relative flex justify-center items-center h-[350px] w-[800px]">
+        {images.map((src, i) => {
+          const position = (i - index + images.length) % images.length;
+
+          const variants = {
+            center: { scale: 1, x: 0, zIndex: 10, opacity: 1 },
+            left: { scale: 0.8, x: -400, zIndex: 5, opacity: 0.6 },
+            right: { scale: 0.8, x: 400, zIndex: 5, opacity: 0.6 },
+          };
+
+          const animate =
+            position === 0 ? "center" : position === 1 ? "right" : "left";
+
+          return (
+            <motion.img
+              key={i}
+              src={src}
+              alt={`Slide ${i + 1}`}
+              className="absolute rounded-lg object-cover shadow-lg w-[350px] h-[200px]"
+              initial="center"
+              animate={animate}
+              variants={variants}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+            />
+          );
+        })}
+      </div>
+
+      {/* Dots Navigation */}
+      <div className="flex mt-4 space-x-2">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIndex(i)}
+            className={`w-3 h-3 rounded-full ${
+              i === index ? "bg-gray-800" : "bg-gray-400"
+            }`}
+          />
         ))}
-      </Swiper>
+      </div>
     </div>
   );
 };
