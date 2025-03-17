@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import Service from "./component/service";
+import Peoples from "./component/peoples";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <div>
+        <Service />
+        <Peoples />
       </div>
     </>
   )
