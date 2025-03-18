@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import image1 from "../assets/testCarousell/image1.jpg";
-import image2 from "../assets/testCarousell/image2.jpg";
-import image3 from "../assets/testCarousell/image3.jpg";
 
-const images = [image1, image2, image3];
+const images = [
+  "/assets/testCarousell/image1.jpg",
+  "/assets/testCarousell/image2.jpg",
+  "/assets/testCarousell/image3.jpg",
+];
 
 const ImageCarousel = () => {
   const [index, setIndex] = useState(0);
@@ -52,7 +53,6 @@ const ImageCarousel = () => {
         {images.map((_, i) => (
           <button
             key={i}
-            // onClick={() => setIndex(i)}
             className={`w-3 h-3 rounded-full ${
               i === index ? "bg-gray-800" : "bg-gray-400"
             }`}

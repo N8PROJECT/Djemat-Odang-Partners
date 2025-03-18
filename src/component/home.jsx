@@ -1,7 +1,3 @@
-import Background from "../assets/Background/Home Background.jpg";
-
-
-
 const Home = () => {
   return (
     <section
@@ -9,7 +5,7 @@ const Home = () => {
     >
       {/* Background Image */}
       <img 
-        src={Background} 
+        src="/assets/Background/Home Background.jpg"  
         alt="Background" 
         className="absolute min-w-full min-h-full object-cover"
       />

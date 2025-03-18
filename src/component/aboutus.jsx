@@ -1,23 +1,16 @@
-import PatternBg from "../assets/Pattern Background/Pattern 2.png";
 import ImageCarousel from "./ImageCarousel";
-
-// Import PNG icons
-import balance from "../assets/Vission & Mission Icon/balance.png";
-import chain from "../assets/Vission & Mission Icon/chain.png";
-import handShake from "../assets/Vission & Mission Icon/hand-shake.png";
-import star from "../assets/Vission & Mission Icon/star.png";
 
 const AboutUs = () => {
   return (
     <section
       id="about-us"
       className="relative flex flex-col items-center justify-start min-h-[120vh] md:min-h-screen py-20"
-
     >
       {/* Left background pattern */}
-      <div className="absolute top-0 left-0 w-[20%] h-screen md:h-full bg-no-repeat bg-left"
+      <div 
+        className="absolute top-0 left-0 w-[20%] h-screen md:h-full bg-no-repeat bg-left"
         style={{
-          backgroundImage: `url(${PatternBg})`,
+          backgroundImage: `url('/assets/Pattern Background/Pattern 2.png')`,
           backgroundSize: "cover",
         }}
       >
@@ -70,31 +63,27 @@ const AboutUs = () => {
           {/* Icons List */}
           <div className="mt-6 space-y-4">
             <div className="flex items-center space-x-4">
-              <img src={handShake} alt="Handshake" className="w-7 h-7" />
+              <img src="/assets/Vission & Mission Icon/hand-shake.png" alt="Handshake" className="w-7 h-7" />
               <span className="text-lg">
-                Deliver high-quality, results-driven legal services to our
-                clients️.
+                Deliver high-quality, results-driven legal services to our clients️.
               </span>
             </div>
             <div className="flex items-center space-x-4">
-              <img src={chain} alt="Chain" className="w-7 h-7" />
+              <img src="/assets/Vission & Mission Icon/chain.png" alt="Chain" className="w-7 h-7" />
               <span className="text-lg">
-                Build long-term client relationships based on trust and
-                satisfaction.
+                Build long-term client relationships based on trust and satisfaction.
               </span>
             </div>
             <div className="flex items-center space-x-4">
-              <img src={star} alt="Star" className="w-7 h-7" />
+              <img src="/assets/Vission & Mission Icon/star.png" alt="Star" className="w-7 h-7" />
               <span className="text-lg">
-                Develop a team of skilled and dedicated lawyers through
-                continuous training and professional development.
+                Develop a team of skilled and dedicated lawyers through continuous training and professional development.
               </span>
             </div>
             <div className="flex items-center space-x-4">
-              <img src={balance} alt="Balance Scale" className="w-7 h-7" />
+              <img src="/assets/Vission & Mission Icon/balance.png" alt="Balance Scale" className="w-7 h-7" />
               <span className="text-lg">
-                Contribute to the advancement of law in Indonesia through active
-                participation in the legal community and social initiatives.
+                Contribute to the advancement of law in Indonesia through active participation in the legal community and social initiatives.
               </span>
             </div>
           </div>
