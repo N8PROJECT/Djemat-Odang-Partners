@@ -11,11 +11,11 @@ const AboutUs = () => {
   return (
     <section
       id="about-us"
-      className="relative flex flex-col items-center justify-start min-h-screen py-20"
+      className="relative flex flex-col items-center justify-start min-h-[120vh] md:min-h-screen py-20"
+
     >
       {/* Left background pattern */}
-      <div
-        className="absolute top-0 left-0 w-[20%] sm:w-[30%] md:w-[20%] lg:w-[20%] xl:w-[20%] h-full bg-no-repeat bg-left"
+      <div className="absolute top-0 left-0 w-[20%] h-screen md:h-full bg-no-repeat bg-left"
         style={{
           backgroundImage: `url(${PatternBg})`,
           backgroundSize: "cover",
@@ -33,11 +33,14 @@ const AboutUs = () => {
       {/* Content Wrapper */}
       <div className="relative z-10 flex flex-col md:flex-row max-w-6xl mx-auto px-6 w-full items-center mt-10 space-y-6 md:space-y-0 md:gap-10">
         {/* Left Text Section - Why Choose Us */}
-        <div className="md:w-1/2 bg-[#5B2245] text-white p-6 md:p-8 rounded-2xl shadow-lg">
-          <h2 className="font-bold uppercase text-xl">
+        <div
+          className="md:w-[55%] bg-[#5B2245] text-white p-8 md:p-10 rounded-2xl 
+    shadow-xl border border-white border-opacity-20 md:mr-10"
+        >
+          <h2 className="font-bold uppercase text-xl md:text-2xl">
             Why You Should Choose Us
           </h2>
-          <p className="mt-4 text-base leading-relaxed">
+          <p className="mt-4 text-base md:text-lg leading-relaxed">
             Djemat Odang and Partners is a leading law firm based in Jakarta,
             Indonesia. Founded with a commitment to delivering high-quality
             legal services, the firm has grown into one of the most respected in
@@ -51,32 +54,55 @@ const AboutUs = () => {
         </div>
 
         {/* Right Text Section - Vision & Mission */}
-        <div className="md:w-1/2 bg-[#D1A43F] text-black p-6 md:p-8 rounded-2xl shadow-lg">
-          <h2 className="font-bold uppercase text-xl">Vision & Mission</h2>
-          <p className="mt-4 text-base leading-relaxed">
+        <div
+          className="md:w-[55%] bg-[#D1A43F] text-black p-8 md:p-10 rounded-2xl 
+    shadow-xl border border-black border-opacity-20"
+        >
+          <h2 className="font-bold uppercase text-xl text-center">
+            Vision & Mission
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-center">
             To be a leading law firm in Indonesia, recognized for our integrity,
             professionalism, and dedication to providing innovative and
-            effective legal solutions
+            effective legal solutions.
           </p>
 
           {/* Icons List */}
-          <div className="mt-4 space-y-3">
-            <div className="flex items-center space-x-3">
-              <img src={handShake} alt="Handshake" className="w-6 h-6" />
-              <span>Deliver high-quality, results-driven legal services</span>
+          <div className="mt-6 space-y-4">
+            <div className="flex items-center space-x-4">
+              <img src={handShake} alt="Handshake" className="w-7 h-7" />
+              <span className="text-lg">
+                Deliver high-quality, results-driven legal services to our
+                clients️.
+              </span>
             </div>
-            <div className="flex items-center space-x-3">
-              <img src={chain} alt="Chain" className="w-6 h-6" />
-              <span>Build long-term client relationships</span>
+            <div className="flex items-center space-x-4">
+              <img src={chain} alt="Chain" className="w-7 h-7" />
+              <span className="text-lg">
+                Build long-term client relationships based on trust and
+                satisfaction.
+              </span>
             </div>
-            <div className="flex items-center space-x-3">
-              <img src={balance} alt="Balance Scale" className="w-6 h-6" />
-              <span>Contribute to legal advancement</span>
+            <div className="flex items-center space-x-4">
+              <img src={star} alt="Star" className="w-7 h-7" />
+              <span className="text-lg">
+                Develop a team of skilled and dedicated lawyers through
+                continuous training and professional development.
+              </span>
             </div>
-            <div className="flex items-center space-x-3">
-              <img src={star} alt="Star" className="w-6 h-6" />
-              <span>Uphold the highest ethical standards</span>
+            <div className="flex items-center space-x-4">
+              <img src={balance} alt="Balance Scale" className="w-7 h-7" />
+              <span className="text-lg">
+                Contribute to the advancement of law in Indonesia through active
+                participation in the legal community and social initiatives.
+              </span>
             </div>
+          </div>
+
+          {/* Bottom Core Values Section */}
+          <div className="mt-6 pt-4 border-t border-black text-center font-bold text-sm">
+            INTEGRITY • PROFESSIONALISM • INNOVATION <br />
+            COLLABORATION • CLIENT COMMITMENT
           </div>
         </div>
       </div>

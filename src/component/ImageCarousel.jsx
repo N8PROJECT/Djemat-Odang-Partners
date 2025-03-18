@@ -52,7 +52,7 @@ const ImageCarousel = () => {
         {images.map((_, i) => (
           <button
             key={i}
-            onClick={() => setIndex(i)}
+            // onClick={() => setIndex(i)}
             className={`w-3 h-3 rounded-full ${
               i === index ? "bg-gray-800" : "bg-gray-400"
             }`}
