@@ -19,7 +19,7 @@ function Clients() {
     return (
         <section className="py-16 text-center overflow-x-hidden">
             {/* Title */}
-            <h2 className="text-xl font-bold text-black">OUR CLIENTS</h2>
+            <h2 className="text-xl font-bold text-black tracking-wide">OUR CLIENTS</h2>
             <div className="w-16 h-[3px] bg-[#D1A43F] mx-auto mt-1 mb-8"></div>
 
             {/* Clients Carousel */}
