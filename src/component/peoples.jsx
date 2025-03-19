@@ -32,7 +32,7 @@ const Peoples = () => {
           <div className="w-16 h-[3px] bg-[#D1A43F] mx-auto mt-1 mb-8"></div>
 
           {/* People Cards */}
-          <div className="flex justify-center gap-20 flex-wrap">
+          <div className="flex justify-center gap-40 flex-wrap">
               {peoples.map((person) => (
                   <motion.div
                       key={person.id}
