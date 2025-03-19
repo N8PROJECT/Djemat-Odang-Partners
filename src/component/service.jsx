@@ -37,7 +37,7 @@ const Service = () => {
     
             {/* Content Wrapper */}
             <div className="relative max-w-6xl mx-auto px-4 text-white">
-                <h2 className="text-3xl font-bold text-center mb-8">Services</h2>
+                <h2 className="text-3xl font-bold text-center mb-8 tracking-wide">Services</h2>
         
                 {/* Grid Cards with Smooth Animation */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -54,7 +54,7 @@ const Service = () => {
                             >
                                 <img src={service.image} alt={service.title} className="w-20 h-20 mx-auto mt-4 object-contain" />
                                 <div className="p-4 text-center text-black flex-grow">
-                                    <h3 className="text-lg font-semibold">{service.title}</h3>
+                                    <h3 className="text-lg font-medium">{service.title}</h3>
                                 </div>
                                 <div className="bg-[#D1A43F] h-[5px] w-full mt-auto"></div>
                             </motion.div>
