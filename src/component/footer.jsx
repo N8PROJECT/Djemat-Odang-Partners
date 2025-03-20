@@ -2,7 +2,7 @@ import { FaInstagram, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#6C264B] text-white py-8 px-6 md:px-12">
+    <footer id="contact" className="bg-[#6C264B] text-white py-8 px-6 md:px-12">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-center gap-8">
         {/* Bagian Kiri */}
         <div className="mb-6 md:mb-0">

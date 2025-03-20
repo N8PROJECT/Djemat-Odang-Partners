@@ -3,28 +3,40 @@ import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [navBg, setNavBg] = useState("bg-transparent backdrop-blur-lg");
+  const [navBg, setNavBg] = useState("bg-transparent backdrop-blur-sm");
 
   useEffect(() => {
     const handleScroll = () => {
       const aboutUsSection = document.getElementById("about-us");
+      const teamSection = document.getElementById("team");
+  
+      let shouldChangeBg = false;
+  
       if (aboutUsSection) {
         const rect = aboutUsSection.getBoundingClientRect();
         if (rect.top <= 50 && rect.bottom >= 50) {
-          setNavBg(
-            "bg-[#6C264B]/70 backdrop-blur-md transition-all duration-700"
-          );
-        } else {
-          setNavBg(
-            "bg-transparent backdrop-blur-lg transition-all duration-700"
-          );
+          shouldChangeBg = true;
         }
       }
+  
+      if (teamSection) {
+        const rect = teamSection.getBoundingClientRect();
+        if (rect.top <= 50 && rect.bottom >= 50) {
+          shouldChangeBg = true;
+        }
+      }
+  
+      if (shouldChangeBg) {
+        setNavBg("bg-[#6C264B]/70 backdrop-blur-md transition-all duration-700");
+      } else {
+        setNavBg("bg-transparent backdrop-blur-lg transition-all duration-700");
+      }
     };
-
+  
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  
 
   return (
     <nav
