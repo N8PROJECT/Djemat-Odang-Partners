@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const images = [
-  "/assets/testCarousell/image1.jpg",
-  "/assets/testCarousell/image2.jpg",
-  "/assets/testCarousell/image3.jpg",
+  "/Assets/testCarousell/image1.jpg",
+  "/Assets/testCarousell/image2.jpg",
+  "/Assets/testCarousell/image3.jpg",
 ];
 
 const ImageCarousel = () => {
@@ -20,14 +20,14 @@ const ImageCarousel = () => {
   return (
     <div className="relative flex flex-col items-center">
       {/* Image Container */}
-      <div className="relative flex justify-center items-center h-[350px] w-[800px]">
+      <div className="relative flex justify-center items-center h-[350px] w-[850px]">
         {images.map((src, i) => {
           const position = (i - index + images.length) % images.length;
 
           const variants = {
             center: { scale: 1, x: 0, zIndex: 10, opacity: 1 },
-            left: { scale: 0.8, x: -400, zIndex: 5, opacity: 0.6 },
-            right: { scale: 0.8, x: 400, zIndex: 5, opacity: 0.6 },
+            left: { scale: 0.8, x: -500, zIndex: 5, opacity: 1 },
+            right: { scale: 0.8, x: 500, zIndex: 5, opacity: 1 },
           };
 
           const animate =
@@ -35,15 +35,16 @@ const ImageCarousel = () => {
 
           return (
             <motion.img
-              key={i}
-              src={src}
-              alt={`Slide ${i + 1}`}
-              className="absolute rounded-lg object-cover shadow-lg w-[350px] h-[200px]"
-              initial="center"
-              animate={animate}
-              variants={variants}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
-            />
+            key={i}
+            src={src}
+            alt={`Slide ${i + 1}`}
+            className="absolute object-cover shadow-lg w-[450px] h-[250px] z-20"  // 👈 Add z-20
+            initial="center"
+            animate={animate}
+            variants={variants}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+          />
+          
           );
         })}
       </div>

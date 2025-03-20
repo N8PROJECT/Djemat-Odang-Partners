@@ -5,7 +5,7 @@ const Home = () => {
     >
       {/* Background Image */}
       <img 
-        src="/assets/Background/Home Background.jpg"  
+        src="/Assets/Background/Home Background.jpg"  
         alt="Background" 
         className="absolute min-w-full min-h-full object-cover"
       />
