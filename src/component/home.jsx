@@ -1,6 +1,7 @@
 const Home = () => {
   return (
     <section
+    id="home"
       className="h-screen bg-cover bg-center relative flex items-center justify-center overflow-hidden"
     >
       {/* Background Image */}
