@@ -20,9 +20,10 @@ const AboutUs = () => {
       </div>
 
       {/* Image Carousel (Centered) */}
-      <div className="relative z-10 w-full max-w-4xl flex justify-center">
-        <ImageCarousel />
-      </div>
+      <div className="relative w-full flex justify-center items-center overflow-visible">
+  <ImageCarousel />
+</div>
+
 
       {/* Content Wrapper */}
       <div className="relative z-10 flex flex-col md:flex-row max-w-6xl mx-auto px-6 w-full items-center mt-10 space-y-6 md:space-y-0 md:gap-10">
