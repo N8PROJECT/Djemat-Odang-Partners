@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const images = [
-  "/Assets/testCarousell/image1.jpg",
-  "/Assets/testCarousell/image2.jpg",
-  "/Assets/testCarousell/image3.jpg",
+  "/Assets/testCarousell/COMPRO-(11 of 12).jpg",
+  "/Assets/testCarousell/COMPRO-(8 of 12).jpg",
+  "/Assets/testCarousell/COMPRO-(21 of 46).jpg",
 ];
 
 const ImageCarousel = () => {
@@ -20,7 +20,7 @@ const ImageCarousel = () => {
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
       {/* Image Container */}
-      <div className="relative flex justify-center items-center h-[350px] w-[1300px] overflow-visible">
+      <div className="relative flex justify-center items-center h-[350px] w-[1400px] overflow-visible">
 
 
 
@@ -41,7 +41,7 @@ const ImageCarousel = () => {
             key={i}
             src={src}
             alt={`Slide ${i + 1}`}
-            className="absolute object-cover shadow-lg w-[450px] h-[250px] z-20"  
+            className="absolute object-cover object-top shadow-lg w-[450px] h-[250px] z-20"  
             initial="center"
             animate={animate}
             variants={variants}
@@ -57,7 +57,7 @@ const ImageCarousel = () => {
         {images.map((_, i) => (
           <button
             key={i}
-            className={`w-3 h-3 rounded-full ${
+            className={`w-2 h-2 rounded-full ${
               i === index ? "bg-gray-800" : "bg-gray-400"
             }`}
           />

@@ -7,17 +7,17 @@ const AboutUs = () => {
       className="relative flex flex-col items-center justify-start min-h-[120vh] md:min-h-screen py-20"
     >
       {/* Left background pattern */}
-      <div 
+      {/* <div 
   className="absolute top-0 left-0 w-[20%] h-screen md:h-full bg-no-repeat bg-left z-0"
 
         style={{
           backgroundImage: `url('/Assets/Pattern Background/Pattern 2.png')`,
           backgroundSize: "cover",
         }}
-      >
+      > */}
         {/* Gradient overlay to blend pattern into white */}
-        <div className="absolute inset-0 bg-gradient-to-r "></div>
-      </div>
+        {/* <div className="absolute inset-0 bg-gradient-to-r "></div>
+      </div> */}
 
       {/* Image Carousel (Centered) */}
       <div className="relative w-full flex justify-center items-center overflow-visible">
@@ -29,28 +29,28 @@ const AboutUs = () => {
       <div className="relative z-10 flex flex-col md:flex-row max-w-6xl mx-auto px-6 w-full items-center mt-10 space-y-6 md:space-y-0 md:gap-10">
         {/* Left Text Section - Why Choose Us */}
         <div
-  className="w-full md:w-[65%] bg-[#5B2245] text-white p-8 md:p-10 
-  shadow-xl border border-white border-opacity-20 md:mr-10 
-  md:relative md:-left-20"
->
-  <h2 className="font-bold uppercase text-xl md:text-2xl">
-    Why You Should Choose Us
-  </h2>
-  {/* Yellow Underline */}
-  <div className="w-16 h-[3px] bg-[#D1A43F] mt-2"></div>
+          className="w-full md:w-[65%] bg-[#5B2245] text-white p-8 md:p-10 
+          shadow-xl border border-white border-opacity-20 md:mr-10 
+          md:relative md:-left-20"
+        >
+          <h2 className="font-bold uppercase text-xl md:text-2xl">
+            Why You Should Choose Us
+          </h2>
+          {/* Yellow Underline */}
+          <div className="w-16 h-[3px] bg-[#D1A43F] mt-2"></div>
 
-  <p className="mt-4 text-base md:text-lg leading-relaxed">
-    Djemat Odang and Partners is a leading law firm based in Jakarta,
-    Indonesia. Founded with a commitment to delivering high-quality
-    legal services, the firm has grown into one of the most respected in
-    the industry. With a team of experienced and dedicated lawyers,
-    Djemat Odang and Partners provides a comprehensive range of legal
-    services, including litigation, arbitration, legal consulting, and
-    dispute resolution. We take pride in our client-focused approach,
-    ensuring that each client receives personalized legal attention and
-    tailored solutions to meet their needs.
-  </p>
-</div>
+          <p className="mt-4 text-base md:text-lg leading-relaxed">
+            Djemat Odang and Partners is a leading law firm based in Jakarta,
+            Indonesia. Founded with a commitment to delivering high-quality
+            legal services, the firm has grown into one of the most respected in
+            the industry. With a team of experienced and dedicated lawyers,
+            Djemat Odang and Partners provides a comprehensive range of legal
+            services, including litigation, arbitration, legal consulting, and
+            dispute resolution. We take pride in our client-focused approach,
+            ensuring that each client receives personalized legal attention and
+            tailored solutions to meet their needs.
+          </p>
+        </div>
 
 
         {/* Right Text Section - Vision & Mission */}
