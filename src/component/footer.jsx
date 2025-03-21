@@ -5,10 +5,10 @@ const Footer = () => {
     <footer id="contact" className="bg-[#6C264B] text-white py-8 px-6 md:px-12">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-center gap-8">
         {/* Bagian Kiri */}
-        <div className="mb-6 md:mb-0 space-y-2">
-          <img src="/Assets/Brand Logo/DOP Logo.png" alt="Logo" className="h-20 mb-4" />
-          <p className="text-sm text-left">Jl. Jend. Sudirman Kav 52-53, <br></br> 17th Floor Indonesia Stock Exchange, Tower 2 Jakarta</p>
-          <p className="text-sm text-left">&copy; {new Date().getFullYear()} 2025 All Rights Reserved.</p>
+        <div className="mb-6 md:mb-0 space-y-2 text-center md:text-left">
+          <img src="/Assets/Brand Logo/DOP Logo.png" alt="Logo" className="h-20 mx-auto md:mx-0 mb-4" />
+          <p className="text-sm">Jl. Jend. Sudirman Kav 52-53, <br></br> 17th Floor Indonesia Stock Exchange, Tower 2 Jakarta</p>
+          <p className="text-sm">&copy; {new Date().getFullYear()} 2025 All Rights Reserved.</p>
         </div>
 
         {/* Bagian Kanan */}
