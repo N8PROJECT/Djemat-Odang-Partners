@@ -20,33 +20,38 @@ const AboutUs = () => {
       </div>
 
       {/* Image Carousel (Centered) */}
-      <div className="relative z-10 w-full max-w-4xl flex justify-center">
-        <ImageCarousel />
-      </div>
+      <div className="relative w-full flex justify-center items-center overflow-visible">
+  <ImageCarousel />
+</div>
+
 
       {/* Content Wrapper */}
       <div className="relative z-10 flex flex-col md:flex-row max-w-6xl mx-auto px-6 w-full items-center mt-10 space-y-6 md:space-y-0 md:gap-10">
         {/* Left Text Section - Why Choose Us */}
         <div
-          className="md:w-[55%] bg-[#5B2245] text-white p-8 md:p-10 
+  className="w-full md:w-[65%] bg-[#5B2245] text-white p-8 md:p-10 
   shadow-xl border border-white border-opacity-20 md:mr-10 
   md:relative md:-left-20"
-        >
-          <h2 className="font-bold uppercase text-xl md:text-2xl">
-            Why You Should Choose Us
-          </h2>
-          <p className="mt-4 text-base md:text-lg leading-relaxed">
-            Djemat Odang and Partners is a leading law firm based in Jakarta,
-            Indonesia. Founded with a commitment to delivering high-quality
-            legal services, the firm has grown into one of the most respected in
-            the industry. With a team of experienced and dedicated lawyers,
-            Djemat Odang and Partners provides a comprehensive range of legal
-            services, including litigation, arbitration, legal consulting, and
-            dispute resolution. We take pride in our client-focused approach,
-            ensuring that each client receives personalized legal attention and
-            tailored solutions to meet their needs.
-          </p>
-        </div>
+>
+  <h2 className="font-bold uppercase text-xl md:text-2xl">
+    Why You Should Choose Us
+  </h2>
+  {/* Yellow Underline */}
+  <div className="w-16 h-[3px] bg-[#D1A43F] mt-2"></div>
+
+  <p className="mt-4 text-base md:text-lg leading-relaxed">
+    Djemat Odang and Partners is a leading law firm based in Jakarta,
+    Indonesia. Founded with a commitment to delivering high-quality
+    legal services, the firm has grown into one of the most respected in
+    the industry. With a team of experienced and dedicated lawyers,
+    Djemat Odang and Partners provides a comprehensive range of legal
+    services, including litigation, arbitration, legal consulting, and
+    dispute resolution. We take pride in our client-focused approach,
+    ensuring that each client receives personalized legal attention and
+    tailored solutions to meet their needs.
+  </p>
+</div>
+
 
         {/* Right Text Section - Vision & Mission */}
         <div

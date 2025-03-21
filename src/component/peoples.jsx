@@ -26,7 +26,7 @@ const Peoples = () => {
   const [selectedPerson, setSelectedPerson] = useState(null);
 
   return (
-      <section className="py-16 text-center">
+      <section id="team" className="py-16 text-center pt-24">
           {/* Title */}
           <h2 className="text-xl font-bold text-black tracking-wide">PEOPLES</h2>
           <div className="w-16 h-[3px] bg-[#D1A43F] mx-auto mt-1 mb-8"></div>

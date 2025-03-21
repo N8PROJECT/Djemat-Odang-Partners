@@ -25,7 +25,7 @@ const Service = () => {
     const visibleServices = showAll ? services : services.slice(0, 8);
   
     return (
-        <section id="services" className="relative py-16">
+        <section id="services" className="relative py-16 pt-24">
             {/* Background Gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#6C264B] to-[#F3EDE1]"></div>
             

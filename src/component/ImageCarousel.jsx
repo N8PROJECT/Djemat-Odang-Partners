@@ -18,9 +18,12 @@ const ImageCarousel = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center">
+    <div className="relative flex flex-col items-center overflow-hidden">
       {/* Image Container */}
-      <div className="relative flex justify-center items-center h-[350px] w-[850px]">
+      <div className="relative flex justify-center items-center h-[350px] w-[1300px] overflow-visible">
+
+
+
         {images.map((src, i) => {
           const position = (i - index + images.length) % images.length;
 
@@ -38,7 +41,7 @@ const ImageCarousel = () => {
             key={i}
             src={src}
             alt={`Slide ${i + 1}`}
-            className="absolute object-cover shadow-lg w-[450px] h-[250px] z-20"  // 👈 Add z-20
+            className="absolute object-cover shadow-lg w-[450px] h-[250px] z-20"  
             initial="center"
             animate={animate}
             variants={variants}
