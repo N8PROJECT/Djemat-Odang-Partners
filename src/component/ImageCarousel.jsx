@@ -20,7 +20,7 @@ const ImageCarousel = () => {
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
       {/* Image Container */}
-      <div className="relative flex justify-center items-center h-[350px] w-[1300px] overflow-visible z-50">
+      <div className="relative flex justify-center items-center h-[350px] w-[1300px] overflow-visible">
 
 
 
