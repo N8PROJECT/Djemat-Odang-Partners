@@ -12,7 +12,7 @@ const Footer = () => {
         </div>
 
         {/* Bagian Kanan */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full md:w-3/5 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full md:w-3/5 text-center md:text-left">
           {/* Contact Us */}
           <div className="space-y-2">
             <h3 className="font-bold text-lg mb-4 tracking-wide">Contact</h3>

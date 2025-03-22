@@ -36,7 +36,7 @@ function Clients() {
                     loop={true}
                     freeMode={true}
                     allowTouchMove={true}
-                    centeredSlides={true}
+                    centeredSlides={false}
                     breakpoints={{
                         0: { slidesPerView: 2 },
                         480: { slidesPerView: 3 },
