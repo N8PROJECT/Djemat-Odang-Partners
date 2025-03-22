@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <section
-    id="home"
+      id="home"
       className="h-screen bg-cover bg-center relative flex items-center justify-center overflow-hidden"
     >
       {/* Background Image */}
@@ -23,10 +23,12 @@ const Home = () => {
           <span className="font-semibold">Protect</span> justice.
         </h1>
 
-        {/* Button */}
-        <button className="mt-6 px-8 py-3 border border-yellow-400 text-yellow-400 font-semibold hover:bg-yellow-400 hover:text-[#6C264B] transition">
-          GET IN TOUCH
-        </button>
+        {/* Button with External Link */}
+        <a href="https://wa.me/+628158776788" target="_blank" rel="noopener noreferrer">
+          <button className="mt-6 px-8 py-3 border border-yellow-400 text-yellow-400 font-semibold hover:bg-yellow-400 hover:text-[#6C264B] transition">
+            GET IN TOUCH
+          </button>
+        </a>
       </div>
     </section>
   );
