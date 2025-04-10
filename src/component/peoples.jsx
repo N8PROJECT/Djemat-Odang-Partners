@@ -5,19 +5,19 @@ const peoples = [
     { 
       id: 1, 
       name: "Othman Nathan Aziz Odang", 
-      description: "Managing Partners", 
+      description: "Managing Partner", 
       profile: "An experienced advocate who has demonstrated exceptional dedication and expertise across various legal fields. He graduated from Parahyangan Catholic University in 2016 and began his career at FKNK Law Firm, where he worked from 2016 to 2020. During this period, he honed his skills in litigation, corporate law, suspension of debt payment obligations (PKPU) & bankruptcy, as well as employment law. In 2021, Othman joined PwC Legal Indonesia, where he worked until 2025. At PwC Legal Indonesia, he broadened his experience by handling a wide range of complex and diverse cases while providing effective legal solutions for clients.", 
       image: "/Assets/Peoples/Othman.jpg" },
     { 
       id: 2, 
       name: "Andhika Djemat", 
-      description: "Partners", 
-      profile: "A Founding Partner at Djemat Odang & Partners, a law firm committed to providing high-quality legal services. His career in law and business began during his time at the Faculty of Law, University of Indonesia, demonstrating strong dedication and vision in the industry. Andhika's professional experience began at the law firm Gani Djemat & Partners in 2021, which strengthened his expertise in various aspects of law. \n\nIn 2022, he founded DEKA LEGAL, a company that focuses on legal consulting services in the fields of corporate and commercial law, establishment of legal entities, taxation, management of Intellectual Property Rights (IPR), corporate compliances, and various other types of legal permits. Since the establishment of DEKA LEGAL, Andhika and his team have successfully assisted more than 2,500 entrepreneurs in establishing legal entities, managing permits, and resolving various legal issues, making DEKA LEGAL a trusted partner for the business world in Indonesia.", 
+      description: "Partner", 
+      profile: "Andhika Djemat is the Founding Partner of Djemat Odang & Partners. He began his career in 2022 while studying at the Faculty of Law, University of Indonesia, by founding DEKA LEGAL—a consultancy firm focused on corporate and commercial law, intellectual property rights, taxation, and business licensing. Since then, Andhika has led his team in assisting over 2,500 entrepreneurs in establishing legal entities and navigating complex regulatory processes. His work has positioned DEKA LEGAL as a trusted legal partner for businesses across Indonesia.", 
       image: "/Assets/Peoples/Andhika Djemat.jpg" },
     { 
       id: 3, 
       name: "Pasca Emanuelle", 
-      description: "Partners", 
+      description: "Partner", 
       profile: "A dedicated legal professional with extensive experience in handling a wide range of litigation and corporate legal matters. With a strong background in civil and criminal law, mergers and acquisitions, insolvency, arbitration, intellectual property, as well as white-collar crime and corruption cases, he has built a reputation for delivering strategic legal solutions tailored to clients' needs. \n\nAs a skilled practitioner in litigation, negotiation, and legal advisory, Pasca has successfully managed cases involving commercial disputes, corporate restructuring, compliance and risk management, employment law, investment regulations, and financial crimes. His expertise extends across various industries, including real estate, healthcare, shipping and transportation, energy, and natural resources. \n\nWith a combination of in-depth legal knowledge, practical experience, and a commitment to excellence, Pasca stands as a trusted and competent legal professional within the industry.", 
       image: "/Assets/Peoples/Pasca.jpg" },
 ];
